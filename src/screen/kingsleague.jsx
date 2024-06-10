@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { KingsLeagueAPI } from '../KingsLeagueAPI';
+import EquipoCard from '../components/equipocard';
 
 const kingsleague = ({ navigation }) => {
     const [teams, setTeams] = useState([]);
@@ -35,8 +36,7 @@ const kingsleague = ({ navigation }) => {
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
                     <TouchableOpacity style={styles.teamItem} onPress={() => navigation.navigate('Players', { teamId: item.id, teamName: item.nombre })}>
-                        <Image source={{ uri: item.logo }} style={styles.logo} />
-                        <Text style={styles.teamName}>{item.nombre}</Text>
+                        <EquipoCard key={item.id} item={item} />
                     </TouchableOpacity>
                 )}
             />
