@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { KingsLeagueAPI } from '../KingsLeagueAPI';
 import EquipoCard from '../components/equipocard';
+import { useNavigation } from '@react-navigation/native';
 
 const kingsleague = ({ navigation }) => {
     const [teams, setTeams] = useState([]);

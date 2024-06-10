@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
 import { KingsLeagueAPI } from '../KingsLeagueAPI';
 import JugadorCard from '../components/JugadorCard';
+import { useNavigation } from '@react-navigation/native';
 
 const equipo = ({ route }) => {
     const { teamId } = route.params;
