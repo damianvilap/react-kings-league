@@ -8,16 +8,14 @@ const KingStack = createNativeStackNavigator();
 export default function StackKing() {
     return (
         <KingStack.Navigator>
-            <CharacterStack.Screen
-                name="equipo"
-                component={equipo}
-            />
             <KingStack.Screen
                 name="kingsleague"
                 component={kingsleague}
             />
-
-
+            <CharacterStack.Screen
+                name="equipo"
+                component={equipo}
+            />
         </KingStack.Navigator>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
-export default function CharacterCard({ item }) {
+
+export default function equipocard({ item }) {
     return (
         <View style={styles.row}>
             <Image source={{ uri: item.image }} style={styles.image} resizeMode="contain" />
